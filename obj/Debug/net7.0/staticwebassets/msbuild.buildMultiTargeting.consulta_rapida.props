@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\consulta_rapida.props" />
+</Project>
