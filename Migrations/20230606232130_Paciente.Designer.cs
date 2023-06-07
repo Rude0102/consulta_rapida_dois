@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace consulta_rapida.Migrations
 {
     [DbContext(typeof(MvcPacienteContext))]
-    [Migration("20230531010022_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230606232130_Paciente")]
+    partial class Paciente
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,9 @@ namespace consulta_rapida.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("especialidade")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("horaConsulta")
                         .HasColumnType("TEXT");

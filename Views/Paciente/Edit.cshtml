@@ -4,9 +4,11 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Paciente</h4>
+<h4>Editar a consulta do paciente @Html.DisplayFor(model => model.nomePaciente)</h4>
+<hr />
+<div>
+    <a asp-action="Index"  class="btn btn-primary">Voltar</a>
+</div>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,14 +26,17 @@
                 <span asp-validation-for="horaConsulta" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <label asp-for="especialidade" class="control-label">Especialidade</label>
+                <select asp-for="especialidade" class="form-control">
+                    <option value="teste">Selecione</option>
+                </select>
+                <span asp-validation-for="especialidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

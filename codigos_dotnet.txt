@@ -1,0 +1,5 @@
+dotnet-aspnet-codegenerator controller -name PacienteController -m Paciente -dc MvcPacienteContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -sqlite
+
+dotnet-aspnet-codegenerator controller -name EspecialidadesController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+
+dotnet add package Microsoft.EntityFrameworkCore.Tools

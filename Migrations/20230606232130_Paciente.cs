@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace consulta_rapida.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Paciente : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,8 @@ namespace consulta_rapida.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     nomePaciente = table.Column<string>(type: "TEXT", nullable: true),
-                    horaConsulta = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    horaConsulta = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    especialidade = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

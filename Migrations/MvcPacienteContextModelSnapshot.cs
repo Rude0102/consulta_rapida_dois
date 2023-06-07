@@ -22,6 +22,9 @@ namespace consulta_rapida.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("especialidade")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("horaConsulta")
                         .HasColumnType("TEXT");
 
